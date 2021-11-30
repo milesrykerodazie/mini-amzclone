@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import db from '../../firebase';
 import Order from '../components/Order';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 function Orders({ orders }) {
    const [session] = useSession();
@@ -16,6 +17,9 @@ function Orders({ orders }) {
 
    return (
       <div>
+         <Head>
+            <title>Orders</title>
+         </Head>
          <Header />
          <main className='max-w-screen-lg p-10 mx-auto'>
             <h1 className='pb-1 mb-2 text-3xl border-b border-yellow-400'>
